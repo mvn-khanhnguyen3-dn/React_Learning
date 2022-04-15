@@ -1098,7 +1098,7 @@ table th, table td {
 }
 
 .slide-item .slide-img {
-  background: url("./images/slider-1.jpg");
+  background: url("../images/slider-1.jpg");
   background-size: cover;
   height: 37.5rem;
   background-repeat: no-repeat;
@@ -1554,3 +1554,4 @@ table th, table td {
     padding-right: 1.25rem;
   }
 }
+/*# sourceMappingURL=styles.css.map */
