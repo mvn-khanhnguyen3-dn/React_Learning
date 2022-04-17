@@ -179,11 +179,14 @@
     font-size: convertPxToRem(20px);
     font-weight: map-get($font-weight, normal);
   }
-  .product-item .sale-percent {
+  .sale-percent {
     color: map-get($colors, brand-css);
+    font-size: convertPxToRem(14px);
   }
-  .product-item .sale-new {
-    color: map-get($colors, brand-css);
+  .sale-new {
+    color: map-get($colors, brand-scss);
+    font-size: convertPxToRem(18px);
+    text-transform: capitalize;
   }
   .product-item-price {
     font-size: convertPxToRem(16px);
@@ -306,6 +309,10 @@
   .fa-search,
   .fa-user {
     display: none;
+  }
+
+  .is-hidden{
+    display: block;
   }
 
   .slide-img {
