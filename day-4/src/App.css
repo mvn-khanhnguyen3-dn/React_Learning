@@ -1,0 +1,86 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 80px;
+  background: black;
+}
+.counter{
+  flex-direction: column;
+  display: flex;
+}
+.counter button{
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px 10px;
+  outline: none;
+  border: none;
+  transition: .4s ease-in-out;
+  background: #000;
+  border: 1px solid #44a1e2;
+  color: #fff;
+}
+.counter button:hover{
+  border-radius: 10px 5px;
+  transition: .4s ease-in-out;
+}
+.number{
+  width: 100px;
+  height: 100px;
+}
+.number h3{
+  background-color: black;
+  color: #fff;
+  margin: 25px 10px;
+  border-radius: 50%;
+  padding:27px;
+  border: 2px solid yellow;
+}
+h3{
+  animation: up_down 5s infinite ;
+}
+@keyframes up_down {
+  0%{
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-15px);
+  }
+  40%{
+    transform: translateY(-10px);
+  }
+  60%{
+    transform: translateY(-5px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+ul li a{
+  text-decoration: none;
+  color: #44a1e2;
+  text-transform: capitalize;
+}
+ul li a:hover{
+  border-bottom: 1px solid #fff; 
+}
+h3{
+  color: #fff;
+}
+.header{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
