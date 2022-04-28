@@ -1,0 +1,15 @@
+li{
+  list-style: none;
+  display: inline-block;
+  .user-item{
+    margin: 20px;
+    line-height: 25px;
+    img{
+      width: 120px;
+      height: 100px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+}
