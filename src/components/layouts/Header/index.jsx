@@ -1,14 +1,21 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
+import {ImEarth} from 'react-icons/im'
+import {AiOutlineUser} from 'react-icons/ai'
 
 export default function Header() {
   return (
-   <>
-   <ul className='page-header'>
-     <li><Link to="/">Home</Link></li>
-     <li><Link to="/about-us">About Us</Link></li>
-     <li><Link to="/user-list">User List</Link></li>
-   </ul>
-   </>
+   <header className='page-header flex justify-content-between'>
+     <div className="header-logo">
+      <ImEarth className="logo"/>
+     </div>
+        <ul className="menu-list">
+          <li><NavLink activeClassName="active" to="/">Home</NavLink></li>
+          <li><NavLink activeClassName="active" to="/products">Products</NavLink></li>
+        </ul>
+       <ul className="header-action">
+         <li><NavLink activeClassName="active" to="/account"><AiOutlineUser/></NavLink></li>
+       </ul>
+   </header>
   )
 }
