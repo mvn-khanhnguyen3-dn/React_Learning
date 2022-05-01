@@ -1,0 +1,37 @@
+import React,{useEffect,useState} from 'react'
+import {useParams} from 'react-router-dom'
+export default function ProductDetail() {
+  let { id } = useParams();
+  const [productDetail,setProductDetail] = useState([])
+  useEffect(()=>{
+    const fetchData = () =>{
+      fetch("https://fakestoreapi.com/products")
+      .then(res => res.json())
+      .then(data => setProductDetail(data))
+    }
+    fetchData();
+  },[]);
+
+  const idDetail = parseInt(id)
+  return (
+    <div>
+      {productDetail.map(product =>(
+      idDetail === product.id &&
+        <li className="product-detail container" key={product.id}>
+         <div className="product-left">
+         <h2 className="product-catalog">{product.category}</h2>
+          <img className="product-img" src={product.image} alt="" />
+         </div>
+        <div className="product-right">
+        <h3 className="product-title">
+             {product.title}
+           </h3>
+           <p className="product-desc">
+             {product.description}
+           </p>
+        </div>
+           </li>
+      ))}
+    </div>
+  );
+}
