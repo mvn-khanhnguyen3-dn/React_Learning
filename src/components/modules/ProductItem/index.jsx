@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useHistory } from "react-router-dom";
 import {AiFillHeart} from 'react-icons/ai'
 import { useSelector, useDispatch } from 'react-redux'
 import {toggle} from '../../../store/Fav'
 
 export default function ProductItem({product}) {
-  const [isFav,setIsFav] = useState(false)
 
   let history = useHistory();
 
@@ -17,9 +16,7 @@ export default function ProductItem({product}) {
   return (
    <>
    <div className="product-item">
-     <span onClick={()=> setIsFav(!isFav)}>
-     <AiFillHeart style={(isFav ? {color:"red"}: {})} className="icon-heart" onClick={() => dispatch(toggle(id))}  />
-     </span>
+     <AiFillHeart style={fav.includes(id) ? {color:"red"}: {}} className="icon-heart" onClick={() => dispatch(toggle(id))}  />
     <h2 className="product-catalog">{category}</h2>
      <a href="">
        <img className="product-img" src={image} alt="" />
